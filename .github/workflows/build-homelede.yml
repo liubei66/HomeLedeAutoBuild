@@ -67,10 +67,6 @@ jobs:
         cd openwrt
         ../$DIY_SH
 
-    - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true'
-
     - name: Download package
       id: package
       run: |
@@ -109,9 +105,3 @@ jobs:
       with:
         name: OpenWrt_firmware
         path: ${{ env.FIRMWARE }}
-
-    - name: Upload firmware to cowtransfer
-      if: env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
-      run: |
-        curl -sL https://git.io/cowtransfer | sh
-        ./cowtransfer-uploader -s -p 8 ${FIRMWARE}
