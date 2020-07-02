@@ -67,13 +67,12 @@ jobs:
 
     - name: Clone source code
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
-           cd openwrt
-           sed -i '5s/#//' feeds.conf.default
-
+      
     - name: Prepare feeds
       run: |
           [ -e prepareCompile1.sh ] && chmod +x prepareCompile1.sh && mv prepareCompile1.sh openwrt/prepareCompile1.sh
           cd openwrt && ./prepareCompile1.sh
+          sed -i '5s/#//' feeds.conf.default
 
     - name: Load custom configuration
       run: |
