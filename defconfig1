@@ -22,6 +22,11 @@ CONFIG_PACKAGE_luci-app-wol=y
 CONFIG_PACKAGE_luci-i18n-wol-zh-cn=y
 #主题
 CONFIG_PACKAGE_luci-theme-netgear=y
+CONFIG_PACKAGE_luci-theme-infinityfreedom=n
+CONFIG_PACKAGE_luci-theme-argon-dark-mod=n
+CONFIG_PACKAGE_luci-theme-bootstrap=n
+CONFIG_PACKAGE_luci-theme-opentomato=n
+CONFIG_PACKAGE_luci-theme-opentomcat=n
 #基础依赖包
 CONFIG_TARGET_IMAGES_PAD=n
 CONFIG_VMDK_IMAGES=n
@@ -50,6 +55,24 @@ CONFIG_PACKAGE_tcpdump=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=n
 CONFIG_PACKAGE_luci-app-adblock=n
 CONFIG_PACKAGE_luci-app-adguardhome=y
+#Docker
+CONFIG_PACKAGE_luci-app-dockerman=n
+CONFIG_PACKAGE_luci-app-strongswanInDocker=n
+CONFIG_PACKAGE_docker-ce=n
+CONFIG_PACKAGE_luci-lib-docker=n
+#Kcptun客户端
+CONFIG_PACKAGE_luci-app-kcptun=n
+#ipsecvpn server
+CONFIG_PACKAGE_luci-app-ipsec-vpnserver-manyusers=n
+CONFIG_PACKAGE_luci-i18n-ipsec-vpnserver-manyusers-zh-cn=n
+#统计图表
+CONFIG_PACKAGE_luci-app-statistics=n
+#多拨助手
+CONFIG_PACKAGE_luci-app-syncdial=n
+CONFIG_PACKAGE_luci-app-mwan3=n
+CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=n
+CONFIG_PACKAGE_luci-app-mwan3helper=n
+CONFIG_PACKAGE_luci-i18n-mwan3helper-zh-cn=n
 #可选扩展
 CONFIG_PACKAGE_luci-app-softethervpn=y
 CONFIG_PACKAGE_luci-i18n-softethervpn-zh-cn=y
