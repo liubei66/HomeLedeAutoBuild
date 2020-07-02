@@ -21,7 +21,7 @@ on:
 env:
   REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede
   REPO_BRANCH: master
-  CONFIG_FILE: defconfig
+  CONFIG_FILE: defconfig1
   DIY_SH: customize.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
@@ -55,15 +55,12 @@ jobs:
            sed -i '5s/#//' feeds.conf.default
 
     - name: Prepare feeds
-      run: cd openwrt && ./prepareCompile.sh
-           ./scripts/feeds update -a
-           ./scripts/feeds install -a
-           ./scripts/feeds install -a
-
+      run: cd openwrt && ./prepareCompile1.sh
 
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
+        [ -e openwrt/.config ] && rm -f openwrt/.config
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_SH
         cd openwrt
