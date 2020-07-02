@@ -82,7 +82,7 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         ../$DIY_SH
-        cd openwrt && make defconfig
+        make defconfig
 
     - name: Download package
       id: package
