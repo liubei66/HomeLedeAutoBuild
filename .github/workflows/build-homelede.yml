@@ -55,7 +55,9 @@ jobs:
            sed -i '5s/#//' feeds.conf.default
 
     - name: Prepare feeds
-      run: cd openwrt && ./prepareCompile1.sh
+      run: |
+          [ -e prepareCompile1.sh ] && chmod +x prepareCompile1.sh && mv prepareCompile1.sh openwrt/prepareCompile1.sh
+          cd openwrt && ./prepareCompile1.sh
 
     - name: Load custom configuration
       run: |
