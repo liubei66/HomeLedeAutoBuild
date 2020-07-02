@@ -13,7 +13,7 @@ sed -i 's/OpenWrt/J.K.Peng build $(date "+%Y.%m.%d") @ OpenWrt/g' openwrt/packag
 fi
 # 3.Modify default theme
 if [ -e openwrt/feeds/luci/collections/luci/Makefile ] ; then
-sed -i 's/luci-theme-bootstrap/luci-theme-netgear/g' openwrt/feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-infinityfreedom/luci-theme-netgear/g' openwrt/feeds/luci/collections/luci/Makefile
 fi
 #4.Modify the shell banner
 if [ -e openwrt/package/base-files/files/etc/banner ] ; then
