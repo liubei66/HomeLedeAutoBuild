@@ -19,7 +19,7 @@ on:
     types: [started]
 
 env:
-  REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede
+  REPO_URL: https://github.com/liubei66/HomeLede
   REPO_BRANCH: master
   CONFIG_FILE: defconfig1
   DIY_SH: customize.sh
