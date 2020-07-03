@@ -122,6 +122,24 @@ CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_samba36-server=n
 CONFIG_PACKAGE_luci-app-hd-idle=n
 CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=n
+#Docker
+CONFIG_PACKAGE_luci-app-dockerman=n
+CONFIG_PACKAGE_luci-app-strongswanInDocker=n
+CONFIG_PACKAGE_docker-ce=n
+CONFIG_PACKAGE_luci-lib-docker=n
+#Kcptun客户端
+CONFIG_PACKAGE_luci-app-kcptun=n
+#ipsecvpn server
+CONFIG_PACKAGE_luci-app-ipsec-vpnserver-manyusers=y
+CONFIG_PACKAGE_luci-i18n-ipsec-vpnserver-manyusers-zh-cn=y
+#统计图表
+CONFIG_PACKAGE_luci-app-statistics=n
+#多拨助手
+CONFIG_PACKAGE_luci-app-syncdial=n
+CONFIG_PACKAGE_luci-app-mwan3=n
+CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=n
+CONFIG_PACKAGE_luci-app-mwan3helper=n
+CONFIG_PACKAGE_luci-i18n-mwan3helper-zh-cn=n
 #nginx
 CONFIG_PACKAGE_nginx=n
 CONFIG_PACKAGE_nginx-mod-luci=n
