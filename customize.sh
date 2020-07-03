@@ -16,6 +16,6 @@ if [ -e openwrt/feeds/luci/collections/luci/Makefile ] ; then
 sed -i 's/luci-theme-infinityfreedom/luci-theme-netgear/g' openwrt/feeds/luci/collections/luci/Makefile
 fi
 #4.Modify the shell banner
-#if [ -e openwrt/package/base-files/files/etc/banner ] ; then
-#sed -i 's/HomeLede v2020.06.27 based on OpenWrt R20.6.18/J.K.Peng build base on OpenWrt/g' openwrt/package/base-files/files/etc/banner
-#fi
+if [ -e openwrt/package/base-files/files/etc/banner ] ; then
+sed -i "7c J.K.Peng build on $(date "+%Y.%m.%d") @OpenWrt" openwrt/package/base-files/files/etc/banner
+fi
