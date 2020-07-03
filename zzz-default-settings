@@ -31,7 +31,7 @@ ln -sf /sbin/ip /usr/bin/ip
 
 sed -i 's/downloads.openwrt.org/openwrt.proxy.ustclug.org/g' /etc/opkg/distfeeds.conf
 sed -i 's/http:/https:/g' /etc/opkg/distfeeds.conf
-sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
+sed -i 's/root::0:0:99999:7:::/root:\$1\$\/.yXPw9i$RijHgD39vX4\/E7nlWgsqJ1:18446:0:99999:7:::/g' /etc/shadow
 
 sed -i "s/# //g" /etc/opkg/distfeeds.conf
 sed -i '/openwrt_luci/ { s/snapshots/releases\/18.06.8/g; }'  /etc/opkg/distfeeds.conf
@@ -63,7 +63,6 @@ uci set dhcp.@dnsmasq[0].interface='br-lan'
 uci set dhcp.@dnsmasq[0].port='54'
 uci add_list dhcp.@dnsmasq[0].server='127.0.0.1#5053'
 uci set dhcp.@dnsmasq[0].filter_aaaa='1'
-uci add_list dhcp.lan.dhcp_option='6,192.168.1.1'
 uci commit dhcp
 
 uci set network.lan.dns='127.0.0.1'
