@@ -68,6 +68,10 @@ jobs:
     - name: Clone source code
       run: |
           git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+          git clone https://github.com/kenzok8/openwrt-packages openwrt/package/openwrt-packages
+          git clone https://github.com/kenzok8/small openwrt/package/small
+          [ -e openwrt/package/lienol/luci-app-passwall/Makefile ] && echo "passwall is in package!" && rm -rf openwrt/package/lienol/luci-app-passwall
+          [ -e openwrt/lienol/luci-app-passwall/Makefile ] && echo "passwall is in openwrt!" && rm -rf openwrt/lienol/luci-app-passwall
           git clone https://github.com/tofuliang/luci-app-koolproxyR openwrt/package/koolproxyR
           [ -e openwrt/package/updateCompileMark ] && rm -f openwrt/package/updateCompileMark
           [ -e openwrt/package/lean/default-settings/files/zzz-default-settings ] && rm -f openwrt/package/lean/default-settings/files/zzz-default-settings
